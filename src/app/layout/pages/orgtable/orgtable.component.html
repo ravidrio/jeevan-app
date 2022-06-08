@@ -1,0 +1,70 @@
+<div class="table-responsive bor">
+    <table class="table table-striped ">
+        <thead *ngFor="let key of inp">
+          <tr>
+            <th scope="col">{{key.a}}</th>
+            <th scope="col">{{key.b}}</th>
+            <th scope="col">{{key.email}}</th>
+            <th *ngIf="type =='tablescomponent'" scope="col">{{key.status}}</th>
+            <th *ngIf="type =='tablescomponent'" scope="col" scope="col">{{key.seen}}</th>
+            <th scope="col">{{key.mob}}</th>
+            <th scope="col">{{key.action}}</th>
+            <th scope="col">{{key.total}}</th>
+            <th scope="col">{{key.name}}</th>
+            <th scope="col">{{key.phn}}</th>
+            <th scope="col">{{key.date}}</th>
+            <th scope="col">{{key.time}}</th>
+            <th scope="col">{{key.add}}</th>
+            <th scope="col">{{key.act}}</th>
+      
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>SmartLED 7045</td>
+            <td>LG</td>
+            <td>Delivered</td>
+            <td>Pending</td>
+            <td>Amazon Pay</td>
+            <td>1020</td>
+            <td>55000</td>
+            <td>Layla</td>
+            <td>2451878375</td>
+            <td>15/02/2022</td>
+            <td>11AM</td>
+            <td>Nagercoil</td>
+            <td>
+            <!-- <ul class="tableUI__action__ul"> -->
+            <i style="padding-left:10px;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                <i style="padding-left:5px;"  class="fa fa-trash" aria-hidden="true"></i>
+              <!-- </ul> -->
+            </td>
+         
+            
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Water Heater</td>
+            <td>Samsung</td>
+            <td>Delivered</td>
+            <td>paid</td>
+            <td> Cash</td>
+            <td>400</td>
+            <td>10000</td>
+            <td>Steven</td>
+            <td>9471878375</td>
+            <td>16/02/2022</td>
+            <td>10AM</td>
+            <td>Madurai</td>
+            <td>
+              <!-- <ul class="tableUI__action__ul"> -->
+              <i style="padding-left:10px;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                  <i style="padding-left:5px;"  class="fa fa-trash" aria-hidden="true"></i>
+                <!-- </ul> -->
+              </td>
+       
+        </tbody>
+      </table>
+    </div>
+    <!-- </div> -->

@@ -1,0 +1,8 @@
+{
+"TabData1":[
+    { "a":"S.No","b":"Product Name","email":"Brand Name","status":"Order Status",
+        "seen":"Payment Status", "mob":"Payment Method",
+        "action":"Delivery Charge", "total":"Total Amount", 
+        "name":"Name","phn":"Phone Number","date":"Date","time":"Time", "add":"Address","act":"Action"}
+  ]
+}

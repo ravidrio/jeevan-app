@@ -1,0 +1,18 @@
+.header {
+    position: fixed;
+}
+.one {
+padding-left:225px;
+font-size: 15px;
+font-weight: 500;
+}
+.dropdown-container {
+    position: relative;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%; /* Bottom of button */
+    right: 0;
+    margin-left: -100px; /* More to the left */
+  }

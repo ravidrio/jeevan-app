@@ -1,0 +1,41 @@
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
+.clr {
+    color:#2ca2c0;
+    font-size: 20px;
+}
+body {
+    background-color: rgb(120, 148, 173);
+}
+.clr1{
+    background-color: #2ca2c0;
+    border-radius: 20px;
+}
+.clr2{
+    background-color: #2ca2c0;;
+}
+.one {
+    padding-top:50px;
+    color:aliceblue;
+    font-size: 45px;
+}
+// .top {
+//     backround-color:grey!important;
+// }
+.bg {
+
+   background: linear-gradient(0.25turn, #3f87a673, #ebf8e1, #f69c3c59);
+}

@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+// @import "primeicons/primeicons.css";
+@import  "primeng/resources/themes/nova-light/theme.css";
+
+@import  "primeng/resources/primeng.min.css";
+body {
+    background-color: #eaeaea;
+  }
+  @media (min-width: 991.98px) {
+    main {
+      padding-left: 240px;
+    }
+  }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+:root {
+  --darkblue:
+    rgb(147, 213, 252);
+
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body .ui-table .ui-table-thead > tr > th {
+  padding: 0.571em 0.857em;
+  border: 1px solid #c8c8c882;
+  font-weight: 700;
+  color: #333333d9;
+  background-color: #96d6fcbd !important;
+}
+body .ui-table .ui-table-tbody > tr > td {
+  background-color: inherit;
+  border: 1px solid #c8c8c852;
+  transition: box-shadow 0.2s;
+}
