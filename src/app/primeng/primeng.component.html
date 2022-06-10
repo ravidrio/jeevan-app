@@ -1,6 +1,8 @@
-<div class="card" style="border-radius:10px; padding: 10px; background-color: #f8f9fa;">    
+<div class="card" style="border-radius:10px; padding: 10px; background-color: #f8f9fa;">
 
-    <ng-template pTemplate="header"  >
+  <p-table [value]="products" styleClass="p-datatable-striped"[rows]="5" [paginator]="true" [pageLinks]="30"
+  [scrollable]="true" scrollHeight="200px" scrollWidth="100%" class="ab"  >
+    <ng-template pTemplate="header">
       <tr>
         <th>Code</th>
         <th>Name</th>
@@ -10,6 +12,20 @@
         <th>Name</th>
         <th>Category</th>
         <th>Quantity</th>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Quantity</th>
+
+        <th>Code</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Quantity</th>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Quantity</th>
+        <th>Code</th>
         <th>Name</th>
         <th>Category</th>
         <th>Quantity</th>
@@ -25,11 +41,25 @@
         <td>{{product.name}}</td>
         <td>{{product.category}}</td>
         <td>{{product.quantity}}</td>
+        <td>{{product.code}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.category}}</td>
+        <td>{{product.quantity}}</td>
+
+        <td>{{product.code}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.category}}</td>
+        <td>{{product.quantity}}</td>
+        <td>{{product.code}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.category}}</td>
+        <td>{{product.quantity}}</td>
+        <td>{{product.code}}</td>
         <td>{{product.name}}</td>
         <td>{{product.category}}</td>
         <td>{{product.quantity}}</td>
       </tr>
     </ng-template>
-
+  </p-table>
   </div>
   <br><br>

@@ -31,6 +31,7 @@ import { TableModule } from 'primeng/table';
 
 
 import { HttpClientModule } from '@angular/common/http';
+import { FormsComponent } from './layout/pages/forms/forms.component';
 
 
 
@@ -50,7 +51,7 @@ import { HttpClientModule } from '@angular/common/http';
     ServiceRequestComponent,
     ManageProductsComponent,
     NotificationsComponent,
-    PaymentsComponent,PrimengComponent
+    PaymentsComponent,PrimengComponent, FormsComponent
 
 
 
@@ -63,7 +64,7 @@ imports: [
   ProgressBarModule,
   NgbModule,
   BrowserAnimationsModule,
-  HttpClientModule,
+  HttpClientModule,TableModule
 
    
 

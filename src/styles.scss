@@ -20,8 +20,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     rgb(147, 213, 252);
 
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+   height: 100%; }
+
+body { 
+  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+  
 body .ui-table .ui-table-thead > tr > th {
   padding: 0.571em 0.857em;
   border: 1px solid #c8c8c882;
@@ -33,4 +37,18 @@ body .ui-table .ui-table-tbody > tr > td {
   background-color: inherit;
   border: 1px solid #c8c8c852;
   transition: box-shadow 0.2s;
+}
+.btn-primary {
+  color: #fff;
+  background-color: rgb(147, 213, 252);
+  border-color: #0d6efd;
+}
+
+.ui-table table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout:auto; 
+}
+.card{
+  background-color: #f8f9fa;
 }

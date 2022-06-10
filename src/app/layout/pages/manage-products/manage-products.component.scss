@@ -27,7 +27,7 @@ tr:nth-child(even) {background-color: #9fe4f53a}
  .ab {
     font-size:25px;
     color:#7f7f7f;
-    font-weight:600 !important;
+    font-weight:400 !important;
     border: radius 15px;
  }
  .ac {
@@ -51,13 +51,14 @@ tr:nth-child(even) {background-color: #9fe4f53a}
 }
 .hey {
     background-color: var(--darkblue);
-    height: 10vh;
-    padding-top: 2.5vh;
+    font-size: 20px;
+    height: 7vh;
+    padding-top: 2vh;
     padding-left: 3vh;
 }
 .pad {
     padding-left: 30px;
-    font-weight:bold;
+    font: weight 500px;;
     color:#7f7f7f; 
 }
 .pad1 {
