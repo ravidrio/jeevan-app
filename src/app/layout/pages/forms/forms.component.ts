@@ -13,6 +13,7 @@ export class FormsComponent implements OnInit {
 
   ngOnInit(): void {
     this.allForm= new FormGroup({
+      
 
     })
    

@@ -12,6 +12,21 @@ export class ServiceRequestComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  displayStyle = "none";
+  displayStyle1 = "none";
+  
+  openPopup() {
+    this.displayStyle = "block";
+  }
+  closePopup() {
+    this.displayStyle = "none";
+  }
+  openPopup1() {
+    this.displayStyle1 = "block";
+  }
+  closePopup1() {
+    this.displayStyle1 = "none";
+  }
 
 }
 export class DatepickerOverviewExample {}

@@ -24,15 +24,15 @@ export class ChartComponent  {
     { a:"Date",b:"Total Orders"},
   
   ]
-  public barChartLabels: Label[] = ['Reliance Retail', 'Vasanth&Co', 'sony', 'Dealer1', 'Dealer2', 'Dealer3', 'Dealer4','Dealer5','Dealer6'];
+  public barChartLabels: Label[] = ['January', 'February', 'March', 'April', 'May', 'June', 'July','August','September','October','November','December'];
   public barChartType: ChartType = 'bar';
   public barChartLegend = true;
   public barChartPlugins = [];
   
 
   public barChartData: ChartDataSets[] = [
-    { data: [65, 59, 40, 1, 56, 55, 40,30,56], label: 'Sales'},
-    { data: [28, 48, 40, 19, 6, 27, 10, 44,27], label: 'Service' }
+    { data: [65, 59, 40, 1, 56, 55, 40,30,56,45,89,59], label: 'Sales'},
+    { data: [28, 48, 40, 19, 6, 27, 10, 44,27,56,89,100], label: 'Service' }
   ];
   public pieChartOptions: ChartOptions = {
     responsive: true,
