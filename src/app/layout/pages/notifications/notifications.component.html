@@ -1,107 +1,186 @@
-<!-- <app-orgtable></app-orgtable> -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <div class="row ac">
-    <div class="col-6 ab" ><i class="fa fa-bell" style="padding-right:20px;" aria-hidden="true"></i>Notification Management</div>
-    <div class="col-4">
-        <div class="input-group ps-5">
-           
-          </div>
-    </div>
-    <div class="col-2 bar">
-      <i class="fa fa-th-large clr" aria-hidden="true"></i>
-      <i class="fa fa-bars" style="color:#95d5fc" aria-hidden="true"></i>
-    </div>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">
+<div class="row ac r">
+  <div class="col-6 ab" ><i class="fa fa-bell" style="padding-right:20px;" aria-hidden="true"></i>Manage Payments</div>
+  <div class="col-4">
+      <div class="input-group ps-5">
+
+        </div>
   </div>
-  <br>
-  <div class="row">
-    <div class="col-6">
-      <div class="card" style="border-radius:15px;">
-        <div class="card-body" style="border-radius:15px;">
-          <h5 class="card-title hey"style="border-radius:15px;">
-           </h5>
-            <div class="row"style="padding-top: 24px;">
-              <div class="col-6 pad">
-                <p>Notification Type</p>
-              </div>
-              <div class="form-group col-md-6">
-                <input class="form-control" type="text" placeholder="Enter Title">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 24px;">
-                <div class="col-6 pad">
-                  <p>Image </p>
-                </div>
-                <div class="form-group col-md-6">
-                  <form>
-                      <div class="form-group">
-                        <!-- <label for="exampleFormControlFile1">Example file input</label> -->
-                        <input class="form-control" type="text" placeholder="Enter URL">
-                      </div>
-                    </form>
-                </div>
-              </div>
-            <div class="row"style="padding-top: 24px;">
-              <div class="col-6 pad">
-                <p>Brand Name</p>
-              </div>
-              <div class="form-group col-md-6"  >
-                <input class="form-control" type="text" placeholder="Brand Name">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 24px;">
-                <div class="col-6 pad">
-                  <p>Notification Message</p>
-                </div>
-                <div class="form-group col-md-6">
-                    <form>
-                        <div class="form-group">
-                          <label class=" padd" for="comment"></label>
-                          <textarea class="form-control" rows="5" id="comment"></textarea>
-                        </div>
-                      </form>
-                </div>
-              </div>
-              <div class="row"  style="padding-top: 24px;">
-                <div class="col-6 pad">
-                  <p>Execute On</p>
-                </div>
-                <div class="form-group col-md-4">
-                  <!-- <label for="inputState">State</label> -->
-                  <select id="inputState" class="form-control">
-                    <option selected>Select Option</option>
-                    <option>...</option>
-                  </select>
-                </div>
-              </div>
-              <div class="row"  style="padding-top: 24px;">
-                <div class="col-6 pad">
-                  <p>Status</p>
-                </div>
-                <div class="form-group col-md-4">
-                  <!-- <label for="inputState">State</label> -->
-                  <select id="inputState" class="form-control">
-                    <option selected>Select Option</option>
-                    <option>...</option>
-                  </select>
-                </div>
-              </div>
-              <div class="row" style="padding-top: 24px; text-align: left;">
-                <div class="col-6"></div>
-                <div class="col-3">
-                    <button type="button" class="btn btn-danger">Cancel</button>
-              </div>
-              <div class="col-3">
-                <button type="button" class="btn btn-primary">Save</button>
-              </div>
-            </div>
-          <p class="card-text">
-            <!-- Some quick example text to build on the card title and make up the bulk of the
-            card's content. -->
-          </p>
-          <!-- <button type="button" class="btn btn-primary">Button</button> -->
+  <div class="col-2 bar ">
+    <i class="fa fa-th-large clr" aria-hidden="true"></i>
+    <i class="fa fa-bars " style="color:#95d5fc"  aria-hidden="true"></i>
+  </div>
+</div>
+<br>
+<div class="mat-app-background basic-container two2" style="padding: 40px;">
+<mat-vertical-stepper class="two2" >
+  <mat-step label="Notification">
+    <form>
+      <div class="form-group one">
+        <label class="two" for="exampleNotification_title">Notification title</label>
+        <input type="text" class="form-control" id="Notification_title" required="true" aria-describedby="Notification_title" placeholder="Enter Title">
+      </div>
+      <div class="form-group one">
+        <label class="two" for="exampleNotification_Text">Notification Text</label>
+        <textarea class="form-control" id="exampleNotification_Text" required="true" rows="4"></textarea>
+      </div>
+      <div class="form-group one">
+        <label class="two" for="exampleURL">Notification image URL (optional)</label>
+        <input type="URL" class="form-control" id="exampleURL" aria-describedby="exampleURL" placeholder="Enter URL">
+      </div>
+      <div class="form-group one">
+        <label class="two" for="examplename">Notification name (optional)</label>
+        <input type="URL" class="form-control" id="examplename" aria-describedby="examplename" placeholder="Enter Name">
+      </div>
+      <!-- <div class="form-check one">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="two" class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div> -->
+    </form>
+    <div class="row">
+      <div class="col-6"  style="padding-left: 297px;">
+      <button mat-button matStepperNext>Next</button></div>
+      <div class="col-6">
+       </div>
+    </div>
+  </mat-step>
+  <mat-step label="Target">
+    <div class="form-group one">
+      <label class="two" for="exampleTarget">Target User</label>
+      <select class="form-control form-control form-select">
+        <option>APP</option>
+      </select>
+    </div>
+    <div class="one" style="color:rgb(165, 157, 157)">
+      <button mat-button (click)="Target()" >Target Another App</button>
+    </div>
+    <div *ngIf="toggleTarget==true" class="form-group one" >
+      <input type="Targ" class="form-control" id="exampleTarg" aria-describedby="exampleTarg" placeholder="">
+    </div>
+    <div class="row">
+      <div class="col-6"  style="padding-left: 297px;">
+      <button mat-button matStepperNext>Next</button></div>
+      <div class="col-6">
+      <button mat-button matStepperPrevious>Previous</button></div>
+    </div>
+  </mat-step>
+  <mat-step label="scheduling">
+    <div class="row one">
+      <div class="col-6 ">
+        <div class="form-group one">
+          <label class="two" for="examplename">Send to eligible users</label>
+          <input type="URL" class="form-control" id="examplename" aria-describedby="examplename" placeholder="Enter Name">
+        </div>
+      </div>
+      <div class="form-group col-md-2" style="padding-top:20px">
+        <div class="form-group one two1">
+          <input type="URL" class="form-control" id="examplename" aria-describedby="examplename" placeholder="">
+        </div>
+      </div>
+      <div class="form-group col-md-4" style="padding-top:20px">
+        <div class="form-group one two1">
+          <input type="URL" class="form-control" id="examplename" aria-describedby="examplename" placeholder="">
         </div>
       </div>
     </div>
+    <div class="row">
+      <div class="col-6"  style="padding-left: 297px;">
+      <button mat-button matStepperNext>Next</button></div>
+      <div class="col-6">
+      <button mat-button matStepperPrevious>Previous</button></div>
     </div>
-<br>
+  </mat-step>
+  <mat-step label="Conversion events (optional)">
+    <div class="row ">
+      <div class="col-2 two1">
+        <p>sent<i class="fa fa-signal" aria-hidden="true"></i></p>
+      </div>
+      <div class="col-md-2 two1 " >
+       <p>opened<i class="fa fa-signal" aria-hidden="true"></i></p>
+      </div>
+      <div class="form-group col-md-4" >
+        <div class="form-group ">
+          <select class="form-control form-control-sm form-select">
+            <option>select goal metric</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row one">
+      <div class="form-group col-md-6" style="padding-top:20px">
+        <div class="form-group one">
+          <label class="two" for="examplename">Analytical label<i class="fa fa-question-circle-o" aria-hidden="true"></i></label>
+          <select class="form-control form-control-sm form-select">
+            <option>Add an analytical label</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6"  style="padding-left: 297px;">
+      <button mat-button matStepperNext>Next</button></div>
+      <div class="col-6">
+      <button mat-button matStepperPrevious>Previous</button></div>
+    </div>
+  </mat-step>
+  <mat-step label="Additional options (optional)">
+    <div class="row">
+      <h4>All fields optional</h4>
+    </div>
+    <div class="row ">
+      <div class="form-group col-md-12" style="padding-top:20px">
+        <div class="form-group one">
+          <label class="two" for="examplename">Analytical label<i class="fa fa-question-circle-o" aria-hidden="true"></i></label>
+          <select class="form-control form-control-sm form-select">
+            <option>Add an analytical label</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-6" style="padding-top:20px">
+        <div class="form-group one">
+          <label class="two" for="exampleKey">Custom data<i class="fa fa-question-circle-o" aria-hidden="true"></i></label>
+          <input type="URL" class="form-control" id="exampleKey" aria-describedby="exampleKey" placeholder="Key">
+        </div>
+      </div>
+        <div class="form-group col-md-6 " style="padding-top:20px">
+          <div class="form-group " style="padding-top:30px ;" >
+            <input type="URL" class="form-control" id="examplevalue" aria-describedby="examplevalue" placeholder="Value">
+          </div>
+      </div>
+
+    </div>
+    <div class="row ">
+      <div class="form-group col-md-3">
+        <div class="form-group one">
+          <label class="two" for="examplename">Sound</label>
+          <select class="form-control form-control-sm form-select">
+            <option>Enable</option>
+            <option>Disabled</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6"  style="padding-left: 297px;">
+        <button mat-button matStepperPrevious>Previous</button>
+       </div>
+      <div class="col-6">
+        <button type="button" class="btn btn-success" style="background-color:rgba(0, 128, 0, 0.842) ;">Send</button>
+      </div>
+    </div>
+
+<!-- for nav bar
+    <form class="d-flex" method="GET" style="min-width: 300px" action="/snippets">
+      <input type="search" name="search" class="form-control rounded" placeholder="Search snippet" aria-label="Search" aria-describedby="search-addon" value="">
+      <input type="top" name="top" value="all" style="display: none;">
+      <button class="btn btn-link btn-rounded px-3 text-reset ms-2" role="button" type="submit">
+          <i class="fas fa-search"></i>
+      </button>
+  </form> -->
+  </mat-step>
+
+</mat-vertical-stepper>
+</div>

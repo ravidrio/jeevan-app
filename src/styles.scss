@@ -38,6 +38,10 @@ body .ui-table .ui-table-tbody > tr > td {
   border: 1px solid #c8c8c852;
   transition: box-shadow 0.2s;
 }
+.shad{
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  border-radius:15px;
+}
 .btn-primary {
   color: #fff;
   background-color: rgb(147, 213, 252);
@@ -58,4 +62,45 @@ body.modal-dialog{
   -o-filter: blur(4px);
   -ms-filter: blur(4px);
   filter: blur(4px);
+}
+.aone{
+  z-index: 9999;;
+}
+.btn-outline-primary {
+  color: rgb(147, 213, 252);
+  border-color:rgb(147, 213, 252);
+}
+.dropdown-menu {
+  position: absolute;
+  z-index: 1000;
+  display: none;
+  min-width: 10rem;
+  padding: .5rem 0;
+  margin: 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #f8f9fa;
+  background-clip: padding-box;
+  border: none !important;
+  border-radius: .25rem;
+}
+.pa {
+  padding-top:0px;
+  // height: 12vh;
+}
+.input-group-text {
+  display: flex;
+  align-items: center;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
 }

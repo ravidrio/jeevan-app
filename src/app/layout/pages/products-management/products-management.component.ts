@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsManagementComponent implements OnInit {
   tabview:boolean=false;
+  blur1:boolean=false;
 
   TabData1:any=[
     { a:"S.No",b:"Product Name",email:"Brand Name",status:"Order Status",seen:"Payment Status", mob:"Payment Method",
@@ -30,16 +31,20 @@ export class ProductsManagementComponent implements OnInit {
   
   openPopup() {
     this.displayStyle = "block";
+    this.blur1=true;
   }
   closePopup() {
     this.displayStyle = "none";
+    this.blur1=false;
   }
   openPopup1() {
     this.displayStyle1 = "block";
+    this.blur1=true;
+
   }
   closePopup1() {
     this.displayStyle1 = "none";
+    this.blur1=false;
   }
- 
-  
+
 }

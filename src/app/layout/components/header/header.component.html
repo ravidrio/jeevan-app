@@ -1,47 +1,33 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <nav class="navbar navbar-expand-lg navbar-light bg-light " style="padding: 20px;" bac>
-  <!-- style="margin-top: 20px;" -->
     <div class="container-fluid">
-
       <div class="" id="navbarSupportedContent">
-        <!-- collapse navbar-collapse -->
-
-        <a class="navbar-brand mt-2 mt-lg-0 one" href="#" >JEEVAN HOME CARE
+        <a class="navbar-brand mt-2 mt-lg-0 one" >JEEVAN HOME CARE
         </a>
       </div>
       <div class="d-flex align-items-center">
         <div class="dropdown">
-
         <i class="fa fa-commenting"  aria-hidden="true"style="font-size:23px;padding-right:25px;"></i>
           <a>
-
           <i class="fa fa-bell" aria-hidden="true"style="font-size:23px;padding-right:25px;"></i>
           </a>
         </div>
-        <!-- Avatar -->
-        <div class="dropdown">
-          <a >
-            <!-- class="dropdown-toggle d-flex align-items-center "
-            href="#"
-            id="navbarDropdownMenuAvatar"
-            role="button"
-            data-mdb-toggle="dropdown"
-            aria-expanded="false" -->
-
-            <img
-              src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"  type="button" (click)="setting()"
-              class="rounded-circle"
-              height="25"
-              alt="Black and White Portrait of a Man"
-              loading="lazy"
-            />
-          </a>
-          <div *ngIf="toogleSetting"class="popUpMenu toggle">
-            <ul class="popUpMenu__dropmenu ">
-              <li>
-                <a [routerLink]="['#']"  routerLinkActive="active"><i class="fa fa-sign-out" aria-hidden="true"></i><label>Sign Out</label></a> 
-              </li>
-            </ul>
+         <div class="dropdown">
+          <div ngbDropdown class="d-inline-block">
+            <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+              <a ><img
+                src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"  type="button" (click)="setting()"
+                class="rounded-circle"
+                height="25"
+                alt="Black and White Portrait of a Man"
+                loading="lazy" />
+              </a>
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button ngbDropdownItem  routerLink="src/" routerLinkActive="active"><i class="fa fa-sign-out pad" aria-hidden="true" ></i>LOG OUT</button>
+              <!-- <button ngbDropdownItem>Another Action</button>
+              <button ngbDropdownItem>Something else is here</button> -->
+            </div>
           </div>
         </div>
       </div>

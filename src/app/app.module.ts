@@ -8,7 +8,7 @@ import { DashboardComponent } from './layout/pages/dashboard/dashboard.component
 import { LayoutComponent } from './layout/layout.component';
 import { ChartComponent } from './layout/pages/chart/chart.component';
 import { ChartsModule } from 'ng2-charts';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { ProgressBarModule} from "angular-progress-bar";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TablesComponent } from './layout/tables/tables.component';
@@ -23,6 +23,12 @@ import { PaymentsComponent } from './layout/pages/payments/payments.component';
 import { ProductService } from './productservice';
 import {PrimengComponent} from './primeng/primeng.component';
 import { TableModule } from 'primeng/table';
+import {MatStepperModule} from '@angular/material/stepper';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatButtonModule} from '@angular/material/button';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+
 
 
 
@@ -51,7 +57,9 @@ import { FormsComponent } from './layout/pages/forms/forms.component';
     ServiceRequestComponent,
     ManageProductsComponent,
     NotificationsComponent,
-    PaymentsComponent,PrimengComponent, FormsComponent
+    PaymentsComponent,
+    PrimengComponent,
+    FormsComponent
 
 
 
@@ -64,9 +72,22 @@ imports: [
   ProgressBarModule,
   NgbModule,
   BrowserAnimationsModule,
-  HttpClientModule,TableModule
+  HttpClientModule,
+  TableModule,
+  MatStepperModule
+  ,MatFormFieldModule
+  ,MatDatepickerModule,
+  ReactiveFormsModule,MatButtonModule,MatButtonToggleModule
 
    
+
+ ],
+ exports: [
+
+  MatStepperModule
+  ,MatFormFieldModule
+  ,MatDatepickerModule,
+  ReactiveFormsModule,
 
  ],
  
