@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!-- <div class="container" style="margin-top:100px;background-color:#eaeaea ; padding-right:0px; padding-left:0px;"> -->
-  <div class="card ac">
+  <div class="card ac shad">
     <div class="card-body">
   <div class="row">
     <div class="col-6 ab" ><i class="fa fa-clock-o" style="padding-right:20px;" aria-hidden="true"></i>Recent Requests</div>
@@ -29,7 +29,9 @@
     <div class="col-6">
       <div class="card" style="border-radius:15px;">
         <div class="card-body" style="border-radius:15px;">
-          <h5 class="card-title hey h"style="border-radius:15px;">
+          <!-- <h5 class="card-title hey h"style="border-radius:15px;"> -->
+            <div class="card hey bg1 ">
+              <div class="card-body">
             <div class="row" >
               <div class="col-9" style="color:#4d4c4c; ">
                Service Request Details
@@ -39,8 +41,11 @@
                 <i class="fa fa-pencil-square-o" aria-hidden="true" style="padding-right:10px;padding-left:22px;"(click)="openPopup1()"></i>
                 <i class="fa fa-info-circle" aria-hidden="true"(click)="openPopup()"></i>
                </div>
-            </div></h5>
-            <div class="row">
+            </div>
+          </div>
+        </div>
+      <!-- </h5> -->
+            <div class="row" style="padding-top: 20px;">
               <div class="col-6 pad">
                 <p>Request Type</p>
               </div>
@@ -111,18 +116,23 @@
       <div class="modal-body">
 
               <div class="card-body" style="border-radius:15px;">
-                <h5 class="card-title hey"style="border-radius:10px;">
+                <!-- <h5 class="card-title hey"style="border-radius:10px;"> -->
+                  <div class="card hey bg1 ">
+                    <div class="card-body">
                   <div class="row" >
                     <div class="col-6" style="color:#4d4c4c; ">
                     Customer Details
                     </div>
                     <div class="col-3">
                      </div>
-                     <div class="col-3"style="padding-left: 50px;">
+                     <div class="col-3" style="padding-left: 65px;">
                       <i class="fa fa-times" aria-hidden="true"(click)="closePopup()"></i>
                      </div>
-                  </div></h5>
-                  <div class="row">
+                  </div>
+                </div>
+              </div>
+            <!-- </h5> -->
+                  <div class="row" style="padding-top: 20px;">
                     <div class="col-6 pad">
                       <p>Name</p>
                     </div>
@@ -167,7 +177,9 @@
       <div class="modal-body">
 
         <div class="card-body" style="border-radius:15px;">
-          <h5 class="card-title hey"style="border-radius:10px;">
+          <!-- <h5 class="card-title hey"style="border-radius:10px;"> -->
+            <div class="card hey bg1 ">
+              <div class="card-body">
             <div class="row" >
               <div class="col-6" style="color:#4d4c4c; ">
               Edit Details
@@ -178,8 +190,11 @@
                 <!-- <i class="fa fa-pencil-square-o" aria-hidden="true" style="padding-right:10px;padding-left:22px;"></i> -->
                 <i class="fa fa-times" aria-hidden="true"(click)="closePopup1()"></i>
                </div>
-            </div></h5>
-            <div class="row">
+            </div>
+          </div>
+        </div>
+      <!-- </h5> -->
+            <div class="row" style="padding-top: 20px;">
               <div class="col-6 pad">
                 <p>Booking Date</p>
               </div>

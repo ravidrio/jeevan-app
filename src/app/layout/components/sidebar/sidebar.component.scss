@@ -1,7 +1,4 @@
-/* Add a black background color to the top navigation */
 
-
-  /* Sidebar */
   .sidebar {
     position: fixed;
     top: 0;
@@ -13,10 +10,10 @@
     z-index: 600;
     margin-top: 85px;
   }
-  .sidebar:hover{
-    overflow-y: scroll;
+//   .sidebar:hover{
+//     overflow-y: scroll;
  
- }
+//  }
  .active{
     background-color:rgba(63, 163, 189, 0.616);
  }
@@ -36,23 +33,25 @@
    margin-bottom: 8px;
  }
  a {
-   background-color:#f8f9fa;
+   background-color:#ffffff;
  }
  a:hover {
   // background-color:#abdde9;
   background-image:
   linear-gradient(
     to right, 
-    rgb(147, 213, 252), #e2eef7
-    );
+    #37B1BE, #37b0be44
+
+  );
   border-radius: 10px;
 }
 .active {
   background-image:
   linear-gradient(
     to right, 
-    rgb(147, 213, 252), #e2eef7
-    );
+    #37B1BE, #37b0be44
+
+  );
 
 }
   .sidebar-sticky {

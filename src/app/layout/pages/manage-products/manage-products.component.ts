@@ -1,5 +1,6 @@
 import { NONE_TYPE } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 declare var $:any
 @Component({
   selector: 'app-manage-products',
@@ -7,11 +8,21 @@ declare var $:any
   styleUrls: ['./manage-products.component.scss']
 })
 export class ManageProductsComponent implements OnInit {
-  ss:any=false;
+  addproducts:any=FormGroup;
+  ss:boolean=false;
   blur:boolean=false;
   constructor() { }
 
   ngOnInit(): void {
+    this.addproducts=new FormGroup({
+      "product_name":new FormControl(),
+      "brand_name":new FormControl(),
+      "Image":new FormControl(),
+      "Description":new FormControl(),
+      "fixed_price":new FormControl(),
+      "offer_price":new FormControl(),
+
+  })
   }
 change(){
     this.ss=false;
@@ -40,5 +51,7 @@ changeone(){
     this.blur=false;
     // $("blur").removeClass("modal-backdrop fade show"); 
   }
-
+  submit(){
+    console.log(this.addproducts.value);
+  }
 }
