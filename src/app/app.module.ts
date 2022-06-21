@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+// import {material} from './material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/components/header/header.component';
@@ -28,6 +29,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatButtonModule} from '@angular/material/button';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {DialogModule} from 'primeng/dialog';
 
 
 
@@ -38,6 +40,7 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsComponent } from './layout/pages/forms/forms.component';
+// import { AddproductstableComponent } from './layout/pages/addproductstable/addproductstable.component';
 
 
 
@@ -59,9 +62,9 @@ import { FormsComponent } from './layout/pages/forms/forms.component';
     NotificationsComponent,
     PaymentsComponent,
     PrimengComponent,
-    FormsComponent
-
-
+    FormsComponent,
+    // AddproductstableComponent,
+   
 
   ],
 imports: [
@@ -77,7 +80,9 @@ imports: [
   MatStepperModule
   ,MatFormFieldModule
   ,MatDatepickerModule,
-  ReactiveFormsModule,MatButtonModule,MatButtonToggleModule
+   ReactiveFormsModule,MatButtonModule,MatButtonToggleModule,DialogModule
+  //  material,
+
 
    
 

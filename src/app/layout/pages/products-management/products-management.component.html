@@ -133,9 +133,7 @@
   [ngStyle]="{'display':displayStyle}">
   <div class="modal-dialog aone" role="document">
     <div class="modal-content"style="border-radius:10px;">
-
       <div class="modal-body">
-
               <div class="card-body" style="border-radius:15px;">
                 <h5 class="card-title hey"style="border-radius:10px;">
                   <div class="card bg1 shad ">
@@ -212,16 +210,17 @@
                </div>
             </div>
           </div>
-        </div></h5>
+        </div></h5><br>
+        <form  [formGroup]="editDetails">
             <div class="row">
               <div class="col-6 pad">
                 <p>Product Name</p>
               </div>
               <div class="form-group col-md-4">
                 <!-- <label for="inputState">State</label> -->
-                <select id="inputState" class="form-control">
+                <select id="inputState" class="form-control" formControlName="Product_Name">
                   <option selected>Choose...</option>
-                  <option>...</option>
+                  <option>LG</option>
                 </select>
               </div>
             </div>
@@ -232,8 +231,9 @@
               </div>
               <div class="form-group col-md-4">
                 <!-- <label for="inputState">State</label> -->
-                <select id="inputState" class="form-control">
+                <select id="inputState" class="form-control"formControlName="Payment_Status">
                   <option selected>Select</option>
+                  <option>Pending</option>
                   <option>Successfull</option>
                 </select>
               </div>
@@ -245,12 +245,27 @@
               </div>
               <div class="form-group col-md-4">
                 <!-- <label for="inputState">State</label> -->
-                <select id="inputState" class="form-control">
+                <select id="inputState" class="form-control"formControlName="Payment_Method">
                   <option selected>Choose...</option>
-                  <option>...</option>
+                  <option>UPI</option>
+                  <option>COD</option>
                 </select>
               </div>
             </div>
+        </form>
+        <br>
+        <div class="row" style="padding-bottom:25px ;">
+          <div class="col-6 ">
+           <!-- <button type="button" class="btn btn-danger"(click)="closePopup()">Cancel</button> -->
+          </div>
+          <div class="col-6 am">
+           <button type="button" class="btn btn-primary" (click)="submit()">Save</button>
+       </div>
+       <p class="card-text">
+         <!-- Some quick example text to build on the card title and make up the bulk of the
+         card's content. -->
+       </p>
+      </div>
           <p class="card-text">
             <!-- Some quick example text to build on the card title and make up the bulk of the
             card's content. -->

@@ -40,7 +40,7 @@ body {
   
 body .ui-table .ui-table-thead > tr > th {
   padding: 0.571em 0.857em;
-  border: 1px solid #c8c8c882;
+  border: 1px solid #bcbabab3;
   font-weight: 700;
   color: #333333d9;
   background-color:#37b0be8f!important;
@@ -132,4 +132,45 @@ body.modal-dialog{
 }
 .card.bg{
   background-color: white;
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: none !important;
+  border: none !important;
+  border-radius:10px;
+}
+
+// element.style {
+// }
+// <style>
+// .p-datatable .p-datatable-tbody > tr {
+//     background: #ffffff;
+//     color: #495057;
+//     transition: box-shadow 0.2s;
+//     outline-color: #a6d5fa;
+// }
+// <style>
+// .p-component, .p-component * {
+//     box-sizing: border-box;
+// }
+// <style>
+// * {
+//     box-sizing: border-box;
+// }
+// user agent stylesheet
+// tr {
+//     display: table-row;
+//     vertical-align: inherit;
+//     border-color: inherit;
+// }
+// <style>
+:host ::ng-deep .p-table {
+  min-width: 112px;
+  max-width: 400px;
+  overflow: auto;
 }

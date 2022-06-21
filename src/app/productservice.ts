@@ -5,6 +5,9 @@ import { Product } from './product';
 
 @Injectable()
 export class ProductService {
+    getCustomersLarge() {
+      throw new Error("Method not implemented.");
+    }
    
 
     status: string[] = ['OUTOFSTOCK', 'INSTOCK', 'LOWSTOCK'];
@@ -120,18 +123,4 @@ export class ProductService {
     }
 }
 
-// import { HttpClient } from '@angular/common/http';
-// import { Injectable } from '@angular/core';
-// import { Product } from './product';
 
-// @Injectable()
-// export class ProductService {
-//     constructor(private http: HttpClient) { }
-
-//     getCustomersMedium() {
-//         return this.http.get<any>('assets/customers-medium.json')
-//             .toPromise()
-//             .then(res => <Product[]>res.data)
-//             .then(data => { return data; });
-//     }
-// }

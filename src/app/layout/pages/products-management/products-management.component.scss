@@ -12,7 +12,10 @@ thead {
       to right, 
       rgb(147, 213, 252), #e2eef7
       );
-   
+}
+.am{
+    text-align:left;
+
 }
 th {
     border-right-width: 1px;
@@ -43,7 +46,7 @@ tr:nth-child(even) {background-color: #9fe4f53a}
 }
 .bar {
     text-align:right;
-    padding-right:30px;    
+    padding-right:30px;
     font-size: 25px;
 }
 .clr{

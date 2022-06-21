@@ -1,64 +1,53 @@
 <div class="card shad bg" style="border-radius:10px; padding: 10px; ">
-  <p-table [value]="products" styleClass="p-datatable-striped"[rows]="5" [paginator]="true" [pageLinks]="30"
-  [scrollable]="true" scrollHeight="200px" scrollWidth="100%">
+  <p-table [value]="products" styleClass="p-datatable-striped"[rows]="5" [paginator]="true" [pageLinks]="30"[responsive]='true'
+  scrollHeight='420px' [scrollable]='true'>
     <ng-template pTemplate="header">
       <tr>
-        <th>Code</th>
-        <th>Name</th>
-        <th>Category</th>
-        <th>Quantity</th>
-        <th>Code</th>
-        <th>Name</th>
-        <th>Category</th>
-        <th>Quantity</th>
-        <th>Code</th>
-        <th>Name</th>
-        <th>Category</th>
-        <th>Quantity</th>
-
-        <th>Code</th>
-        <th>Name</th>
-        <th>Category</th>
-        <th>Quantity</th>
-        <th>Code</th>
-        <th>Name</th>
-        <th>Category</th>
-        <th>Quantity</th>
-        <th>Code</th>
-        <th>Name</th>
-        <th>Category</th>
-        <th>Quantity</th>
+        <th  style="min-width:50px" pSortableColumn="Code">Code<p-sortIcon field="Code"></p-sortIcon></th>
+        <th style="min-width:150px">S No</th>
+        <th style="min-width:150px">Product Name</th>
+        <th style="min-width:150px">Brand Name & Quantity</th>
+        <th style="min-width:150px">Order Status</th>
+        <th style="min-width:150px">Payment Status</th>
+        <th style="min-width:150px">Payment Method</th>
+        <th style="min-width:150px">Delivery Charge</th>
+        <th style="min-width:150px">Total Amount</th>
+        <th style="min-width:150px">Name</th>
+        <th style="min-width:150px">Phn No</th>
+        <th style="min-width:150px">Date</th>
+        <th style="min-width:150px">Time</th>
+        <th style="min-width:150px">Address</th>
+        <th style="min-width:150px">Actions</th>
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-product>
       <tr>
-        <td>{{product.code}}</td>
-        <td>{{product.name}}</td>
-        <td>{{product.category}}</td>
-        <td>{{product.quantity}}</td>
-        <td>{{product.code}}</td>
-        <td>{{product.name}}</td>
-        <td>{{product.category}}</td>
-        <td>{{product.quantity}}</td>
-        <td>{{product.code}}</td>
-        <td>{{product.name}}</td>
-        <td>{{product.category}}</td>
-        <td>{{product.quantity}}</td>
+        <td style="min-width:50px">{{product.sno}}</td>
+        <td style="min-width:150px">{{product.name}}</td>
+        <td style="min-width:150px">{{product.category}}</td>
+        <td style="min-width:150px">{{product.category}}</td>
+        <td style="min-width:150px">{{product.code}}</td>
+        <td style="min-width:150px">{{product.name}}</td>
+        <td style="min-width:150px">{{product.category}}</td>
+        <td style="min-width:150px">{{product.quantity}}</td>
+        <td style="min-width:150px">{{product.code}}</td>
+        <td style="min-width:150px">{{product.name}}</td>
+        <td style="min-width:150px">{{product.category}}</td>
+        <td style="min-width:150px">{{product.quantity}}</td>
 
-        <td>{{product.code}}</td>
-        <td>{{product.name}}</td>
-        <td>{{product.category}}</td>
-        <td>{{product.quantity}}</td>
-        <td>{{product.code}}</td>
-        <td>{{product.name}}</td>
-        <td>{{product.category}}</td>
-        <td>{{product.quantity}}</td>
-        <td>{{product.code}}</td>
-        <td>{{product.name}}</td>
-        <td>{{product.category}}</td>
-        <td>{{product.quantity}}</td>
+        <td style="min-width:150px">{{product.code}}</td>
+        <td style="min-width:150px">{{product.name}}</td>
+        <td style="display:revert; min-width:150px;">
+          <i class="fa fa-pencil bb" style="color:rgb(38, 38, 224)" aria-hidden="true" ></i>
+        <i class="fa fa-trash bb" style="color:red" aria-hidden="true"></i>
+              </td>
       </tr>
     </ng-template>
   </p-table>
   </div>
   <br><br>
+
+  
+
+
+
