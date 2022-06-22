@@ -15,11 +15,11 @@
       </div>
     </div>
     <div class="col -2 bar" style="padding-top: 7px;">
-      <i class="fa fa-th-large clr" aria-hidden="true"></i>
-      <i class="fa fa-bars" style="color:#95d5fc" aria-hidden="true"></i>
+      <i class="fa fa-th-large clr" aria-hidden="true"(click)="changeview()"></i>
+      <i class="fa fa-bars" style="color:#95d5fc" aria-hidden="true"(click)="changeview1()"></i>
     </div>
     <div class="col-2" Style=" text-align: center;">
-      <button class="btn btn-primary" type="submit"(click)="changeone()"><i class="fa fa-plus" aria-hidden="true"></i>AddProducts</button>
+      <button class="btn btn-primary" type="submit"(click)="openPopup1()"><i class="fa fa-plus" aria-hidden="true"></i>AddProducts</button>
     </div>
   </div>
     </div>
@@ -27,7 +27,43 @@
 
 
 <br>
-<div class="row">
+<div class="card shad bg" style="border-radius:10px; padding: 10px; "  *ngIf="tabview==false">
+  <p-table [value]="products" styleClass="p-datatable-striped"[rows]="5" [paginator]="true" [pageLinks]="30"[responsive]='true'
+  scrollHeight='420px' [scrollable]='true'>
+    <ng-template pTemplate="header">
+      <tr>
+
+        <th style="min-width:150px">S No</th>
+        <th style="min-width:150px">Request Type</th>
+        <th style="min-width:150px">Product Name </th>
+        <th style="min-width:150px">Brand Name</th>
+        <th style="min-width:150px">Product Price</th>
+        <th style="min-width:150px">Offer price</th>
+        <th style="min-width:150px">Product Image</th>
+        <th style="min-width:150px">Description</th>
+        <th style="min-width:150px">Actions</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-product>
+      <tr>
+        <td style="min-width:150px">{{product.sno}}</td>
+        <td style="min-width:150px">{{product.name}}</td>
+        <td style="min-width:150px">{{product.category}}</td>
+        <td style="min-width:150px">{{product.category}}</td>
+        <td style="min-width:150px">{{product.code}}</td>
+        <td style="min-width:150px">{{product.name}}</td>
+        <td style="min-width:150px">{{product.category}}</td>
+        <td style="min-width:150px">{{product.quantity}}</td>
+        <td style="display:revert; min-width:150px;">
+          <i class="fa fa-pencil bb" style="color:rgb(38, 38, 224)" aria-hidden="true" ></i>
+        <i class="fa fa-trash bb" style="color:red" aria-hidden="true"></i>
+              </td>
+      </tr>
+    </ng-template>
+  </p-table>
+  </div>
+<br>
+<div class="row"  *ngIf="tabview==true">
   <div class="col-sm-4">
   <div class=" card shad">
     <div class="row">
@@ -204,128 +240,126 @@
 </div>
 </div>
   <br>
-  <div class="container"  >
-    <!-- *ngIf="ss==true" -->
-   
-     <div class="card ac shad">
-      <div class="card-body">
-  <div class="row" >
-    <div class="col-6 ab pad2" ><i class="fa fa-clock-o" style="padding-right:20px;" aria-hidden="true"></i>Add Products</div>
-<div class="col-4"></div>
-    <div class="col-2 bar pad2">
-      <i class="fa fa-th-large clr" aria-hidden="true"></i>
-      <i class="fa fa-bars" style="color:#95d5fc" aria-hidden="true"></i>
-    </div>
-  </div>
-</div>
-</div>
-  <br>
- 
-  <div class="row" >
- 
-    <div class="col-sm-6">
-      <div class="card" style="border-radius:15px;">
+  <div
+  class="modal "
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{'display':displayStyle1}">
+  <div class="modal-dialog aone "  role="document">
+    <div class="modal-content"style="border-radius:10px;">
+
+      <div class="modal-body">
+
         <div class="card-body" style="border-radius:15px;">
-          <!-- <h5 class="card-title hey"style="border-radius:10px;" > -->
+          <!-- <h5 class="card-title hey"style="border-radius:10px;"> -->
             <div class="card hey bg1 ">
               <div class="card-body">
             <div class="row" >
-              <div class="col-6" style="color:#4d4c4c;" >
-              Edit Details
+              <div class="col-6" style="color:#4d4c4c; ">
+              Add Product
               </div>
               <div class="col-3">
                </div>
                <div class="col-3" style="    padding-left: 65px;">
                 <!-- <i class="fa fa-pencil-square-o" aria-hidden="true" style="padding-right:10px;padding-left:22px;"></i> -->
-                <i class="fa fa-times" aria-hidden="true"(click)="change()"></i>
+                <i class="fa fa-times" aria-hidden="true"(click)="closePopup1()"></i>
                </div>
             </div>
+          </div>
+        </div>
+      <!-- </h5> -->
+      <form  [formGroup]="addproducts">
+        <div class="row"style="padding-top: 24px;">
+          <div class="col-6 pad">
+            <p>Product Name</p>
+          </div>
+          <div class="form-group col-md-6">
+            <input class="form-control" type="text" formControlName="product_name" placeholder="">
+          </div>
+        </div>
+        <div class="row"style="padding-top: 24px;">
+          <div class="col-6 pad">
+            <p>Brand Name</p>
+          </div>
+          <div class="form-group col-md-6"  >
+            <input class="form-control" type="text" formControlName="brand_name" placeholder="">
+          </div>
+        </div>
+        <div class="row" style="padding-top: 24px;">
+          <div class="col-6 pad">
+            <p>Image</p>
+          </div>
+          <div class="form-group col-md-6">
+            <!-- <form>
+                <div class="form-group">
+                   <label for="exampleFormControlFile1">Example file input</label>
+                  <input type="file" class="form-control-file" formControlName="Image" id="Image">
+                </div>
+              </form> -->
+              <input class="form-control" type="text" formControlName="Image" placeholder="">
+          </div>
+        </div>
+        <div class="row" style="padding-top: 24px;">
+            <div class="col-6 pad">
+              <p>Description</p>
             </div>
-            </div>
-            <!-- </h5> -->
-            <form  [formGroup]="addproducts">
-            <div class="row"style="padding-top: 24px;">
-              <div class="col-6 pad">
-                <p>Product Name</p>
-              </div>
-              <div class="form-group col-md-6">
-                <input class="form-control" type="text" formControlName="product_name" placeholder="">
-              </div>
-            </div>
-            <div class="row"style="padding-top: 24px;">
-              <div class="col-6 pad">
-                <p>Brand Name</p>
-              </div>
-              <div class="form-group col-md-6"  >
-                <input class="form-control" type="text" formControlName="brand_name" placeholder="">
-              </div>
-            </div>
-            <div class="row" style="padding-top: 24px;">
-              <div class="col-6 pad">
-                <p>Image</p>
-              </div>
-              <div class="form-group col-md-6">
-                <!-- <form>
+            <div class="form-group col-md-6">
+                <form>
                     <div class="form-group">
-                       <label for="exampleFormControlFile1">Example file input</label>
-                      <input type="file" class="form-control-file" formControlName="Image" id="Image">
+                      <label class=" padd" for="comment"></label>
+                      <textarea class="form-control" formControlName="Description" rows="5" id="comment"></textarea>
                     </div>
-                  </form> -->
-                  <input class="form-control" type="text" formControlName="Image" placeholder="">
-              </div>
+                  </form>
             </div>
-            <div class="row" style="padding-top: 24px;">
-                <div class="col-6 pad">
-                  <p>Description</p>
-                </div>
-                <div class="form-group col-md-6">
-                    <form>
-                        <div class="form-group">
-                          <label class=" padd" for="comment"></label>
-                          <textarea class="form-control" formControlName="Description" rows="5" id="comment"></textarea>
-                        </div>
-                      </form>
-                </div>
-              </div>
-              <div class="row"style="padding-top: 24px;">
-                <div class="col-6 pad">
-                  <p>Fixed Price</p>
-                </div>
-                <div class="form-group col-md-6" >
-                    <input class="form-control" type="number" formControlName="fixed_price" placeholder="">
-                </div>
-              </div>
-              <div class="row" style="padding-top: 24px;">
-                <div class="col-6 pad">
-                  <p>Offer Price</p>
-                </div>
-                <div class="form-group col-md-6" >
-                    <input class="form-control" type="number" formControlName="offer_price" placeholder="">
-                </div>
-              </div>
-              <div class="row" style="padding-top: 24px; text-align: left;">
-                <div class="col-6"></div>
-                <div class="col-3">
-                    <button type="button" class="btn btn-danger">Cancel</button>
-              </div>
-              <div class="col-3">
-                <button type="button" class="btn btn-primary"(click)="openPopup()">Save</button>
-              </div>
+          </div>
+          <div class="row"style="padding-top: 24px;">
+            <div class="col-6 pad">
+              <p>Fixed Price</p>
             </div>
+            <div class="form-group col-md-6" >
+                <input class="form-control" type="number" formControlName="fixed_price" placeholder="">
+            </div>
+          </div>
+          <div class="row" style="padding-top: 24px;">
+            <div class="col-6 pad">
+              <p>Offer Price</p>
+            </div>
+            <div class="form-group col-md-6" >
+                <input class="form-control" type="number" formControlName="offer_price" placeholder="">
+            </div>
+          </div>
+          <div class="row" style="padding-top: 24px; text-align: left;">
+            <div class="col-6"></div>
+            <div class="col-3">
+                <button type="button" class="btn btn-danger" (click)="closePopup1()">Cancel</button>
+          </div>
+          <div class="col-3">
+            <button type="button" class="btn btn-primary"(click)="closeSave()">Save</button>
+          </div>
+        </div>
+      <p class="card-text">
+        <!-- Some quick example text to build on the card title and make up the bulk of the
+        card's content. -->
+      </p>
+    </form>
           <p class="card-text">
             <!-- Some quick example text to build on the card title and make up the bulk of the
             card's content. -->
           </p>
-        </form>
+          <!-- <button type="button" class="btn btn-primary">Button</button> -->
         </div>
+            </div>
       </div>
     </div>
-   
-    </div>
+    <div *ngIf="blur==true" class="modal-backdrop fade show"></div>
+  <br>
+  </div>
+ 
+
   </div>
 <br>
 
-<div
+<!-- <div
   class="modal aone"
   tabindex="-1"
   role="dialog"
@@ -341,20 +375,20 @@
       </div>
      <div class="row" style="padding-bottom:25px ;">
          <div class="col-6 al">
-          <button type="button" class="btn btn-danger"(click)="closePopup()">Cancel</button>
+          <button type="button" class="btn btn-danger">Cancel</button>
          </div>
          <div class="col-6 am">
           <button type="button" class="btn btn-primary" (click)="submit()">Save</button>
       </div>
       <p class="card-text">
-        <!-- Some quick example text to build on the card title and make up the bulk of the
-        card's content. -->
+        Some quick example text to build on the card title and make up the bulk of the
+        card's content. 
       </p>
      </div>
             </div>
       </div>
-    </div>
-  </div>
+    </div> -->
+
 
 
 <!-- <div class="row">

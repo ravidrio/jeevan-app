@@ -1,6 +1,8 @@
 import { NONE_TYPE } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Product } from 'src/app/product';
+import { ProductService } from "src/app/productservice";
 declare var $:any
 @Component({
   selector: 'app-manage-products',
@@ -8,12 +10,17 @@ declare var $:any
   styleUrls: ['./manage-products.component.scss']
 })
 export class ManageProductsComponent implements OnInit {
+  products: Product[];
+  tabview:boolean=false;
   addproducts:any=FormGroup;
   ss:boolean=false;
   blur:boolean=false;
-  constructor() { }
+  constructor(private productService: ProductService) {}
+
+
 
   ngOnInit(): void {
+    this.productService. getProductsSmall().then(data => (this.products = data));
     this.addproducts=new FormGroup({
       "product_name":new FormControl(),
       "brand_name":new FormControl(),
@@ -24,34 +31,44 @@ export class ManageProductsComponent implements OnInit {
 
   })
   }
+  displayStyle = "none";
+  displayStyle1 = "none";
+  changeview(){
+    this.tabview=true;
+  }
+  changeview1(){
+    this.tabview=false;
+  }
 change(){
     this.ss=false;
   }
 changeone(){
     this.ss=true;
   }
-  displayStyle = "none";
 
   openPopup() {
     this.displayStyle = "block";
     this.blur=true;
-    // console.log("blur")
-    //   $("blur").addClass("modal-backdrop fade show");
-      // if(this.displayStyle){
-      //   e.target.parentElement.classList.addClass("modal-backdrop fade show")
-      // }
-      // else{
-      //   e.target.parentElement.classList.removeClass("toggle")
-      // }
-      // console.log(e.target.parentElement.classList)
-
   }
   closePopup() {
     this.displayStyle = "none";
     this.blur=false;
-    // $("blur").removeClass("modal-backdrop fade show"); 
+  }
+  openPopup1() {
+    this.displayStyle1 = "block";
+    this.blur=true;
+  }
+  closePopup1() {
+    this.displayStyle1 = "none";
+    this.blur=false;
   }
   submit(){
     console.log(this.addproducts.value);
+  }
+  closeSave(){
+    console.log(this.addproducts.value);
+    this.displayStyle1 = "none";
+    this.blur=false;
+
   }
 }

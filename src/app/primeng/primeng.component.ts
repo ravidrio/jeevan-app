@@ -9,14 +9,14 @@ import { Product } from "src/app/product";
 })
 export class PrimengComponent {
   products: Product[];
-  productDialog: boolean;
+  // productDialog: boolean;
 
 
-  product: Product;
+  // product: Product;
 
-  selectedProducts: Product[];
+  // selectedProducts: Product[];
 
-  submitted: boolean;
+  // submitted: boolean;
 
 
   constructor(private productService: ProductService) {}

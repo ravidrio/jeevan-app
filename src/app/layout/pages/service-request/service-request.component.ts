@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from "src/app/productservice";
+import { Product } from "src/app/product";
 // import {MatDatepickerModule,} from '@angular/material/datepicker';
 
 @Component({
@@ -7,12 +9,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./service-request.component.scss']
 })
 export class ServiceRequestComponent implements OnInit {
- 
+  products: Product[];
+  tabview:boolean=false;
   blur:boolean=false;
+  selectedProducts: Product[];
 
-  constructor() { }
+  constructor(private productService: ProductService) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.productService. getProductsSmall().then(data => (this.products = data));
+  }
+  changeview(){
+    this.tabview=true;
+  }
+  changeview1(){
+    this.tabview=false;
   }
   displayStyle = "none";
   displayStyle1 = "none";

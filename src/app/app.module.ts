@@ -24,12 +24,14 @@ import { PaymentsComponent } from './layout/pages/payments/payments.component';
 import { ProductService } from './productservice';
 import {PrimengComponent} from './primeng/primeng.component';
 import { TableModule } from 'primeng/table';
+import {RatingModule} from 'primeng/rating';
 import {MatStepperModule} from '@angular/material/stepper';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatButtonModule} from '@angular/material/button';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {DialogModule} from 'primeng/dialog';
+import {ButtonModule} from 'primeng/button';
 
 
 
@@ -80,7 +82,9 @@ imports: [
   MatStepperModule
   ,MatFormFieldModule
   ,MatDatepickerModule,
-   ReactiveFormsModule,MatButtonModule,MatButtonToggleModule,DialogModule
+   ReactiveFormsModule,MatButtonModule,
+   MatButtonToggleModule,DialogModule,
+   RatingModule,ButtonModule
   //  material,
 
 

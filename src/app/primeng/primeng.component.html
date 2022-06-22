@@ -3,8 +3,7 @@
   scrollHeight='420px' [scrollable]='true'>
     <ng-template pTemplate="header">
       <tr>
-        <th  style="min-width:50px" pSortableColumn="Code">Code<p-sortIcon field="Code"></p-sortIcon></th>
-        <th style="min-width:150px">S No</th>
+        <th  style="min-width:100px" pSortableColumn="Code">S No<p-sortIcon field="Code"></p-sortIcon></th>
         <th style="min-width:150px">Product Name</th>
         <th style="min-width:150px">Brand Name & Quantity</th>
         <th style="min-width:150px">Order Status</th>
@@ -22,9 +21,8 @@
     </ng-template>
     <ng-template pTemplate="body" let-product>
       <tr>
-        <td style="min-width:50px">{{product.sno}}</td>
+        <td style="min-width:100px">{{product.sno}}</td>
         <td style="min-width:150px">{{product.name}}</td>
-        <td style="min-width:150px">{{product.category}}</td>
         <td style="min-width:150px">{{product.category}}</td>
         <td style="min-width:150px">{{product.code}}</td>
         <td style="min-width:150px">{{product.name}}</td>

@@ -50,6 +50,9 @@ body .ui-table .ui-table-tbody > tr > td {
   border: 1px solid #c8c8c852;
   transition: box-shadow 0.2s;
 }
+body .ui-table .ui-table-tbody > tr:nth-child(even) {
+  background-color: #eaeaea;
+}
 .shad{
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
   border-radius:15px;
