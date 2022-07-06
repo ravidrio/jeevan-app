@@ -1,102 +1,72 @@
 <div class="container cont">
-<br>
-<div class="card shad" >
-  <div class="card-body">
-    <div style="display: block; " class="chartjs-render-monitor ">
-      <canvas  baseChart 
-        [datasets]="barChartData"
-        [labels]="barChartLabels"
-        [options]="barChartOptions"
-        [plugins]="barChartPlugins"
-        [legend]="barChartLegend"
-        [chartType]="barChartType">
-      </canvas>
-  </div>
-</div>
-</div>
-<br>
-<div class="row">
-  <div class="col-sm-6">
-    <div class="card shad">
-      <div class="card-body">
-        <div style="display: block;">
-          <canvas baseChart
-            [data]="pieChartData" 
-            [labels]="pieChartLabels"
-            [chartType]="pieChartType"
-            [options]="pieChartOptions"
-            [plugins]="pieChartPlugins"
-            [legend]="pieChartLegend">
-          </canvas>
-        </div>
+  <br>
+  <div class="card shad">
+    <div class="card-body">
+      <div style="display: block; " class="chartjs-render-monitor ">
+        <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+          [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType">
+        </canvas>
       </div>
     </div>
   </div>
-  <div class="col-sm-6">
-    <div class="card shad">
-      <div class="card-body">
-        <div style="display: block; margin-top: 20px;">
-          <p style="color:#878888">Orders<ngb-progressbar type="success" [value]="70" [striped]="true"[animated]="true">Orders</ngb-progressbar></p>
-          <p style="color:#878888">Service<ngb-progressbar type="info" [value]="50"[striped]="true" [animated]="true">Sevice</ngb-progressbar></p>
-          <p style="color:#878888">Pending Orders<ngb-progressbar style="color:pink" type="warning" [value]="75" [striped]="true" [animated]="true">Pending</ngb-progressbar></p>
-          <!-- <p>Penduing Services<ngb-progressbar type="danger" [value]="100" [striped]="true">Completed!</ngb-progressbar></p>
+  <br>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card shad">
+        <div class="card-body">
+          <div style="display: block;">
+            <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType"
+              [options]="pieChartOptions" [plugins]="pieChartPlugins" [legend]="pieChartLegend">
+            </canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card shad">
+        <div class="card-body">
+          <div style="display: block; margin-top: 20px;">
+            <p style="color:#878888">Orders<ngb-progressbar type="success" [value]="70" [striped]="true"
+                [animated]="true">Orders</ngb-progressbar>
+            </p>
+            <p style="color:#878888">Service<ngb-progressbar type="info" [value]="50" [striped]="true"
+                [animated]="true">Sevice</ngb-progressbar>
+            </p>
+            <p style="color:#878888">Pending Orders<ngb-progressbar style="color:pink" type="warning" [value]="75"
+                [striped]="true" [animated]="true">Pending</ngb-progressbar>
+            </p>
+            <!-- <p>Penduing Services<ngb-progressbar type="danger" [value]="100" [striped]="true">Completed!</ngb-progressbar></p>
            -->
+          </div>
         </div>
       </div>
     </div>
   </div>
-  </div>
-<br>
-<div class="row">
-  <div class="col-sm-6">
-    <div class="card shad">
-      <div class="card-body">
-        <div class="table-responsive">
-          <table class="table tableUI">
-            <thead  *ngFor="let key of inpData1">
-              <tr>
-                <th>{{key.a}}</th>
-                <th>{{key.b}}</th>
-             </tr>
-            </thead>
-            <tbody *ngFor="let key of inpData">
-              <tr >
-              <td  >{{key.body}}
-              </td>
-              <td  >{{key.body1}}
-              </td>
-            </tr>
+  <br>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card shad">
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table tableUI">
+              <thead *ngFor="let key of inpData1">
+                <tr>
+                  <th>{{key.a}}</th>
+                  <th>{{key.b}}</th>
+                </tr>
+              </thead>
+              <tbody *ngFor="let key of inpData">
+                <tr>
+                  <td>{{key.body}}
+                  </td>
+                  <td>{{key.body1}}
+                  </td>
+                </tr>
               </tbody>
-              </table>
-            </div>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
+    <br>
   </div>
-<br>
-
-
-<!-- <div class="row">
-  <div class="col-5 tab2"style="margin-left:12px;margin-top:25px">
-    <div class="table-responsive">
-      <table class="table tableUI">
-        <thead  *ngFor="let key of inpData1">
-          <tr>
-            <th>{{key.a}}</th>
-            <th>{{key.b}}</th>
-         </tr>
-        </thead>
-        <tbody *ngFor="let key of inpData">
-          <tr >
-          <td  >{{key.body}}
-          </td>
-          <td  >{{key.body1}}
-          </td>
-        </tr>
-          </tbody>
-          </table>
-        </div>
-  </div>
-</div> -->
-
-</div>
-

@@ -2,6 +2,7 @@
 	"data": [
 		{
 			"sno": "1000",
+			"brand":"Boat",
 			"code": "f230fh0g3",
 			"name": "Bamboo Watch",
 			"description": "Product Description",
@@ -10,10 +11,18 @@
 			"category": "Accessories",
 			"quantity": 24,
 			"inventoryStatus": "INSTOCK",
-			"rating": 4
+			"rating": 4,
+			"pno":84578251255,
+			"address":"We’ll start with a common issue your browser. Some browsers have settings that can interfere with specific resources showing.",
+             "one":	1,
+			 "two":"offer",
+			 "three":"offer.jpeg"
+	
 		},
+
 		{
 			"sno": "1001",
+			"brand":"LG",
 			"code": "nvklal433",
 			"name": "Black Watch",
 			"description": "Product Description",
@@ -22,10 +31,17 @@
 			"category": "Accessories",
 			"quantity": 61,
 			"inventoryStatus": "INSTOCK",
-			"rating": 4
-		},
+			"rating": 4,
+			"pno":4785251255,
+			"address":"We’ll start with a common issue your browser. Some browsers have settings that can interfere with specific resources showing.",
+		 "one":	2,
+		"two":"Mega Sale",
+		"three":"Mega.jpeg"
+	}, 
+
 		{
 			"sno": "1002",
+			"brand":"Boat",
 			"code": "zz21cz3c1",
 			"name": "Blue Band",
 			"description": "Product Description",
@@ -34,11 +50,17 @@
 			"category": "Fitness",
 			"quantity": 2,
 			"inventoryStatus": "LOWSTOCK",
-			"rating": 3
+			"rating": 3,
+			"pno":78543251255,
+			"address":"We’ll start with a common issue your browser. Some browsers have settings that can interfere with specific resources showing.",
+			"one":	3,
+			"two":"100%",
+			"three":"100%.jpeg"
 		},
 		{
 			"sno": "1003",
 			"code": "244wgerg2",
+			"brand":"HP",
 			"name": "Blue T-Shirt",
 			"description": "Product Description",
 			"image": "blue-t-shirt.jpg",
@@ -46,11 +68,14 @@
 			"category": "Clothing",
 			"quantity": 25,
 			"inventoryStatus": "INSTOCK",
-			"rating": 5
+			"rating": 5,
+			"pno":353453251255,
+			"address":"We’ll start with a common issue your browser. Some browsers have settings that can interfere with specific resources showing."
 		},
 		{
 			"sno": "1004",
 			"code": "h456wer53",
+			"brand":"Boat",
 			"name": "Bracelet",
 			"description": "Product Description",
 			"image": "bracelet.jpg",
@@ -58,11 +83,14 @@
 			"category": "Accessories",
 			"quantity": 73,
 			"inventoryStatus": "INSTOCK",
-			"rating": 4
+			"rating": 4,
+			"pno":6548251255,
+			"address":"We’ll start with a common issue your browser. Some browsers have settings that can interfere with specific resources showing."
 		},
 		{
 			"sno": "1005",
 			"code": "av2231fwg",
+			"brand":"Samsung",
 			"name": "Brown Purse",
 			"description": "Product Description",
 			"image": "brown-purse.jpg",
@@ -70,35 +98,44 @@
 			"category": "Accessories",
 			"quantity": 0,
 			"inventoryStatus": "OUTOFSTOCK",
-			"rating": 4
+			"rating": 4,
+			"pno":11578251255,
+			"address":"We’ll start with a common issue your browser. Some browsers have settings that can interfere with specific resources showing."
 		},
 		{
 			"sno": "1006",
 			"code": "bib36pfvm",
 			"name": "Chakra Bracelet",
+			"brand":"Boat",
 			"description": "Product Description",
 			"image": "chakra-bracelet.jpg",
 			"price": 32,
 			"category": "Accessories",
 			"quantity": 5,
 			"inventoryStatus": "LOWSTOCK",
-			"rating": 3
+			"rating": 3,
+			"pno":21458251255,
+			"address":"We’ll start with a common issue your browser. Some browsers have settings that can interfere with specific resources showing.We’ll start with a common issue your browser. Some browsers have settings that can interfere with specific resources showing."
 		},
 		{
 			"sno": "1007",
 			"code": "mbvjkgip5",
 			"name": "Galaxy Earrings",
+			"brand":"Boat",
 			"description": "Product Description",
 			"image": "galaxy-earrings.jpg",
 			"price": 34,
 			"category": "Accessories",
 			"quantity": 23,
 			"inventoryStatus": "INSTOCK",
-			"rating": 5
+			"rating": 5,
+			"pno":41778251255,
+			"address":"We’ll start with a common issue your browser. Some browsers have settings that can interfere with specific resources showing."
 		},
 		{
 			"sno": "1008",
 			"code": "vbb124btr",
+			"brand":"Boat",
 			"name": "Game Controller",
 			"description": "Product Description",
 			"image": "game-controller.jpg",
@@ -106,11 +143,14 @@
 			"category": "Electronics",
 			"quantity": 2,
 			"inventoryStatus": "LOWSTOCK",
-			"rating": 4
+			"rating": 4,
+			"pno":78478251255,
+			"address":"We’ll start with a common issue your browser. Some browsers have settings that can interfere with specific resources showing."
 		},
 		{
 			"sno": "1009",
 			"code": "cm230f032",
+			"brand":"Boat",
 			"name": "Gaming Set",
 			"description": "Product Description",
 			"image": "gaming-set.jpg",
@@ -118,7 +158,9 @@
 			"category": "Electronics",
 			"quantity": 63,
 			"inventoryStatus": "INSTOCK",
-			"rating": 3
+			"rating": 3,
+			"pno":94578251255,
+			"address":"We’ll start with a common issue your browser. Some browsers have settings that can interfere with specific resources showing."
 		}
        
        

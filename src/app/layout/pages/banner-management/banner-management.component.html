@@ -1,0 +1,146 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+<div class="card ac pa shad">
+    <div class="card-body">
+    <div class="row" style="padding-top:0px" >
+    <div class="col-5 ab" ><i class="fa fa-picture-o" style="padding-right:20px;" aria-hidden="true"></i>Banner Management</div>
+    <div class="col-4">
+      <div class="input-group rounded">
+        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+        <span class="input-group-text border-0" id="search-addon">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </span>
+      </div>
+    </div>
+    <div class="col-3" Style=" text-align: center;">
+      <button class="btn btn-primary" type="submit" (click)="openPopup()"><i class="fa fa-plus" aria-hidden="true"></i>Add Banners</button>
+    </div>
+  </div>
+    </div>
+  </div>
+<br>  
+<!-- [paginator]="true" -->
+  <div class="card shad bg" style="border-radius:10px; padding: 10px; "  >
+    <p-table [value]="products" styleClass="p-datatable-striped"[rows]="3" [paginator]="true"  [pageLinks]="30"[responsive]='true'
+    scrollHeight='420px' [scrollable]='true'>
+      <ng-template pTemplate="header">
+        <tr>
+  
+          <th style="min-width:150px">S No</th>
+          <th style="min-width:150px">Banner Name</th>
+          <th style="min-width:150px">Banner Image </th>
+          <th style="min-width:150px">Actions</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-product>
+        <tr>
+          <td style="min-width:150px">{{product.one}}</td>
+          <td style="min-width:150px">{{product.two}}</td>
+          <td style="min-width:150px">{{product.three}}</td>
+          <td style="display:revert; min-width:150px;">
+            <!-- <i class="fa fa-pencil bb" style="color:rgb(38, 38, 224)" aria-hidden="true" ></i> -->
+          <i class="fa fa-trash bb" style="color:red" aria-hidden="true"></i>
+                </td>
+        </tr>
+      </ng-template>
+    </p-table>
+    </div>
+    <br>
+    <div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{'display':displayStyle}">
+  <div class="modal-dialog aone" role="document">
+    <div class="modal-content"style="border-radius:10px;">
+      <div class="modal-body">
+              <div class="card-body" style="border-radius:15px;">
+                <h5 class="card-title hey"style="border-radius:10px;">
+                  <div class="card bg1 shad ">
+                    <div class="card-body">
+                  <div class="row" >
+                    <div class="col-6" style="color:#4d4c4c; "><i class="fa fa-plus-circle" aria-hidden="true"></i>
+                    Add banners
+                    </div>
+                    <div class="col-3">
+                     </div>
+                     <div class="col-3"style="padding-left: 70px;">
+                      <i class="fa fa-times" aria-hidden="true"(click)="closePopup()"></i>
+                     </div>
+                  </div>
+                </div>
+              </div></h5>
+              <form  [formGroup]="addBanner">
+              <div class="row"style="padding-top: 24px;">
+                <div class="col-4 pad">
+                  <p>Banner Name</p>
+                </div>
+                <div class="form-group col-md-8">
+                  <input class="form-control" type="text" formControlName="banner_name" placeholder="">
+                </div>
+              </div>
+              <div class="row"style="padding-top: 24px;">
+                <div class="col-4 pad">
+                  <p>Image</p>
+                </div>
+                <div class="form-group col-md-5">
+                  <input class="form-control" type="text" formControlName="Image" placeholder="URL">
+                </div>
+                <div class="form-group col-md-1">
+                   <p style="padding-top: 6px;"> or </p>
+                </div>
+                <div class="form-group col-md-2">
+                  <label >
+                    <img src="../../../../assets/images/upload.jpeg" alt="" class="img-fluid">
+                    <input type="file" name="" id="file"  style="display: none;">
+                  </label>
+               </div>
+            </div>
+                <!-- <div class="row"style="padding-top: 24px;">
+                  <div class="col-6 pad">
+                    <p></p>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <form class="md-form my-3">
+                        <div class="file-field">
+                          <div class="btn btn-primary btn-sm float-left waves-effect waves-light" style="width: -webkit-fill-available;">
+                            <input type="file">
+                          </div>
+                        </div>
+                      </form>
+
+                  </div>
+              </div> -->
+              <div class="row"style="padding-top: 24px;">
+                <div class="col-4 pad">
+                  <p>Status</p>
+                </div>
+                <div class="form-group col-md-8">
+                  <div class="form-group">
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row" style="padding-top: 24px; text-align: left;">
+                <div class="col-6"></div>
+                <div class="col-3">
+                    <button type="button" class="btn btn-danger" (click)="closePopup()"><i class="fa-duotone fa-camera-retro fa-flip" style="color: #1c7ed6;"></i>Cancel</button>
+              </div>
+              <div class="col-3">
+                <button type="button" class="btn btn-primary"(click)="closeSave()">Save</button>
+              </div>
+            </div>
+                <p class="card-text">
+                </p>
+                </form>
+            </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div *ngIf="blur1==true" class="modal-backdrop fade show"></div>

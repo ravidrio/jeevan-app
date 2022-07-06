@@ -32,6 +32,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
   );
 }
+.bb {
+  color: red;
+  font-size: 20px !important;
+  padding-left: 20px;
+}
+
 html, body {
    height: 100%; }
 
@@ -62,10 +68,26 @@ body .ui-table .ui-table-tbody > tr:nth-child(even) {
 }
 .btn-primary {
   color: #fff;
-  background-color: rgb(147, 213, 252);
-  border-color: #0d6efd;
+  background-color: #37b0bee0!important;
+  border-color: #37b0bee0!important;
 }
-
+body .ui-paginator .ui-paginator-pages .ui-paginator-page.ui-state-active {
+  background-color: #37b0bee0;
+  color: #ffffff;
+}
+// .btn-primary {
+//   color: #fff;
+//   background-color: linear-gradient(to right, #37b0bee0, #37b0be44);
+//   border-color: #8fd3db;
+// }
+// .btn-primary {
+//   color: #fff;
+//   background-color: #8fd3db;
+//   border-color: #0d6efd;
+// }
+.i.active {
+  background-color: #54bcc8; ;
+}
 .ui-table table {
     border-collapse: collapse;
     width: 100%;
@@ -74,6 +96,12 @@ body .ui-table .ui-table-tbody > tr:nth-child(even) {
 .card{
   background-color: #ffff;
 }
+.active{
+  color: #37b0bee0;
+  }
+  .inactive{
+  color: #585b5ce0;
+  }
 body.modal-dialog{
   -webkit-filter: blur(4px);
   -moz-filter: blur(4px);
@@ -91,6 +119,12 @@ body.modal-dialog{
   width: 240px;
   z-index: 600;
   margin-top: 93px !important;
+}
+.list-group-item.active {
+  z-index: 2;
+  color: #fff;
+  background-color: #0d6efd00;
+  border-color: #0d6dfd00;
 }
 .aone{
   z-index: 9999;;
@@ -110,7 +144,7 @@ body.modal-dialog{
   color: #212529;
   text-align: left;
   list-style: none;
-  background-color: #f8f9fa;
+  background-color: #ffffff;
   background-clip: padding-box;
   border: none !important;
   border-radius: .25rem;
@@ -118,6 +152,10 @@ body.modal-dialog{
 .pa {
   padding-top:0px;
   // height: 12vh;
+}
+.mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
+  background-color: #54bcc8;
+  color: #fff;
 }
 .input-group-text {
   display: flex;
@@ -148,32 +186,30 @@ body.modal-dialog{
   border-radius:10px;
 }
 
-// element.style {
-// }
-// <style>
-// .p-datatable .p-datatable-tbody > tr {
-//     background: #ffffff;
-//     color: #495057;
-//     transition: box-shadow 0.2s;
-//     outline-color: #a6d5fa;
-// }
-// <style>
-// .p-component, .p-component * {
-//     box-sizing: border-box;
-// }
-// <style>
-// * {
-//     box-sizing: border-box;
-// }
-// user agent stylesheet
-// tr {
-//     display: table-row;
-//     vertical-align: inherit;
-//     border-color: inherit;
-// }
-// <style>
-:host ::ng-deep .p-table {
-  min-width: 112px;
-  max-width: 400px;
-  overflow: auto;
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.separator::before,
+.separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #000;
+}
+
+.separator:not(:empty)::before {
+  margin-right: .25em;
+}
+
+.separator:not(:empty)::after {
+  margin-left: .25em;
+}
+.warn {
+  font-size: 12px;
+  color:rgb(216, 55, 55);
+}
+.color1{
+  color: blue;
 }
